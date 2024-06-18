@@ -17,10 +17,10 @@ valor_sindicato = float(salario_bruto_mensal * 0.05)
 print(f"O valor que você paga para o sindicato é R$ {valor_sindicato}.")
 
 
-def calculo_salario(salario_bruto_mensal):
+def calculo_salario_liquido(salario_bruto_mensal, valor_ir, valor_inss, valor_sindicato):
     salario_liquido_mensal = salario_bruto_mensal - valor_ir - valor_inss - valor_sindicato
     return salario_liquido_mensal
 
-resultado = calculo_salario(salario_bruto_mensal)
+resultado = calculo_salario_liquido(salario_bruto_mensal, valor_ir, valor_inss, valor_sindicato)
 
 print(f"O valor do seu salário líquido mensal é de R$ {resultado}.")      
